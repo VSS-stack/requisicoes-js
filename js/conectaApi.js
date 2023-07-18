@@ -8,11 +8,11 @@ async function criaVideos(titulo, descricao, url, imagem) {
     const conexao = await fetch("http://localhost:3000/videos", {
         method: "POST",
         headers: {
-            "Content-type": "aplication/json"
+            "Content-type": "application/json"
         },
         body: JSON.stringify({
             titulo: titulo,
-            descricao: `${descricao} mil vizualizações`,
+            descricao: `${descricao} mil visualizaÃ§Ãµes`,
             url: url,
             imagem: imagem
         })
@@ -24,5 +24,5 @@ async function criaVideos(titulo, descricao, url, imagem) {
 
 export const conectaApi = {
     listaVideos,
-    criaVideos,
+    criaVideos
 };
