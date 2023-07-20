@@ -18,6 +18,10 @@ async function criaVideos(titulo, descricao, url, imagem) {
         })
     });
 
+    if(!conexao.ok) {
+        throw new Error("Erro no envio!");
+    }
+
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
 }
